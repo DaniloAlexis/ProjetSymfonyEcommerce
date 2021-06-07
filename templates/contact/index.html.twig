@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter - La boutique de Paki{% endblock %}
+
+{% block content %}
+    <h2>Nous contacter</h2>
+    <p>N"hésitez pas à prendre contact avec notre équipe.</p>
+
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+
+    <div class="row">
+        <div class="col-md-8">{{ form(form) }}</div>
+        <div class="col-md-4">
+            <strong>La boutique de Paki</strong>
+            <hr>
+            <p>06 35 35 35 35</p><br>
+            <p>7 rue du dév, 35000 Rennes</p><br>
+            <p>contact@laboutiquedepaki.com</p>
+        </div>
+    </div>
+{% endblock %}
